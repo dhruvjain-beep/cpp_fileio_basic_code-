@@ -1,0 +1,25 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+char l1[100],l2[100],l3[100];
+  ofstream fout;
+  fout.open("country.txt");
+  fout<<"united states\n"<<"united kingdom\n"<<"south korea\n";
+  fout.close();
+  fout.open("sample.txt");
+  fout<<"washington\n"<<"london\n"<<"seoul\n";
+  fout.close();
+
+  cout<<"entering reading  mode:"<<endl;
+  ifstream fin;
+  fin.open("country.txt");
+  fin.getline(l1,100);
+  fin.getline(l2,100);
+  fin.getline(l3,100);
+  cout<<l1<<endl<<l2<<endl<<l3<<endl;
+  
+  return 0;
+};
